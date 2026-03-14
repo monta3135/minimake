@@ -92,7 +92,7 @@ def main():
 
     i = 1
     while i < len(sys.argv):
-        if sys.argv[i] == "--file" and i + 1 < leng(sys.argv):
+        if sys.argv[i] == "--file" and i + 1 < len(sys.argv):
             build_file = sys.argv[i + 1]
         else:
             targets.append(sys.argv[i])
