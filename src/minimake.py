@@ -55,6 +55,10 @@ def resolve_build_order(config: dict, target: str) -> list[str]:
         # TODO: 依存先を再帰的に処理してください
         # ヒント: targets[t].get("deps", []) で依存先のリストを取得できます
 
+        for dep in targets[t].get("deps", []):
+            visit(dep)
+
+
         visiting.remove(t)
         visited.add(t)
         order.append(t)
